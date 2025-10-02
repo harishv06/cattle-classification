@@ -1,4 +1,4 @@
-# Cattle-Breed-Classification
+# 🐄🔍 Cattle Breed Classification System 🚀 | Computer Vision + Deep Learning Project
 
 <img width="1280" height="720" alt="SQL_Thumbnail (32)" src="https://github.com/user-attachments/assets/9d2dd8ee-7f67-44c3-a450-9bbcd232d785" />
 
