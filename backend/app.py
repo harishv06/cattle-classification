@@ -165,6 +165,9 @@ def predict():
         # Get class name
         predicted_class = CLASS_NAMES[class_idx] if class_idx < len(CLASS_NAMES) else f"Class_{class_idx}"
 
+        # Normalize class name for metadata lookup (convert to lowercase)
+        predicted_class_key = predicted_class.lower().replace(' ', '_')
+
         # Get top 3 predictions for additional context
         top_3_idx = np.argsort(predictions)[-3:][::-1]
         top_3 = []
@@ -176,11 +179,14 @@ def predict():
                 })
 
         # Get breed metadata
-        metadata = BREEDS_DATA.get(predicted_class, {
+        metadata = BREEDS_DATA.get(predicted_class_key, {
             'milk_yield': 'N/A',
             'native_region': 'N/A',
             'traits': []
         })
+
+        # Debug logging
+        print(f"DEBUG: predicted_class='{predicted_class}', key='{predicted_class_key}', found={predicted_class_key in BREEDS_DATA}")
 
         return jsonify({
             'success': True,
