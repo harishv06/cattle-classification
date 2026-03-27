@@ -258,10 +258,25 @@ function displayResult(data) {
     // Update confidence value
     elements.confidenceValue.textContent = data.confidence.toFixed(1) + '%';
 
-    // Animate confidence bar
+    // Update confidence bar
     setTimeout(() => {
         elements.confidenceFill.style.width = data.confidence + '%';
     }, 100);
+
+    // Update breed metadata
+    if (data.metadata) {
+        document.getElementById('milkYield').textContent = data.metadata.milk_yield || 'N/A';
+        document.getElementById('nativeRegion').textContent = data.metadata.native_region || 'N/A';
+
+        const traitsList = document.getElementById('traitsList');
+        if (data.metadata.traits && data.metadata.traits.length > 0) {
+            traitsList.innerHTML = data.metadata.traits.map(trait => `
+                <span class="trait-tag">${trait}</span>
+            `).join('');
+        } else {
+            traitsList.innerHTML = '<span class="trait-tag">No traits available</span>';
+        }
+    }
 
     // Update top predictions
     if (data.top_3 && data.top_3.length > 0) {

@@ -5,6 +5,7 @@ A simple Flask API for classifying cattle breeds using a trained PyTorch model.
 """
 
 import os
+import json
 import numpy as np
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -18,6 +19,7 @@ import io
 
 # Model settings
 MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'models', 'indian_bovine_breeds_classifier.pt')
+BREEDS_DATA_PATH = os.path.join(os.path.dirname(__file__), 'breeds_data.json')
 IMAGE_SIZE = 224
 
 # Allowed file extensions
@@ -39,6 +41,7 @@ preprocess = transforms.Compose([
 print("Loading PyTorch model...")
 model = None
 CLASS_NAMES = []
+BREEDS_DATA = {}
 
 try:
     # Load saved model data
@@ -63,6 +66,15 @@ try:
 except Exception as e:
     print(f"Error loading model: {e}")
     model = None
+
+# Load breed metadata
+try:
+    with open(BREEDS_DATA_PATH, 'r') as f:
+        BREEDS_DATA = json.load(f)
+    print(f"Breed metadata loaded successfully: {len(BREEDS_DATA)} breeds")
+except Exception as e:
+    print(f"Error loading breed metadata: {e}")
+    BREEDS_DATA = {}
 
 # ============== Helper Functions ==============
 
@@ -163,10 +175,18 @@ def predict():
                     'confidence': float(predictions[idx]) * 100
                 })
 
+        # Get breed metadata
+        metadata = BREEDS_DATA.get(predicted_class, {
+            'milk_yield': 'N/A',
+            'native_region': 'N/A',
+            'traits': []
+        })
+
         return jsonify({
             'success': True,
             'prediction': predicted_class,
             'confidence': round(confidence, 2),
+            'metadata': metadata,
             'top_3': top_3
         })
 

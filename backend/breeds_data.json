@@ -1,0 +1,207 @@
+{
+  "gir": {
+    "milk_yield": "8-10 liters/day",
+    "native_region": "Gujarat",
+    "traits": ["High milk fat content (5-6%)", "Heat resistant", "Disease resistant", "Good mothering ability"]
+  },
+  "sahiwal": {
+    "milk_yield": "10-12 liters/day",
+    "native_region": "Punjab (India/Pakistan border)",
+    "traits": ["High milk yield", "Heat and disease resistant", "Long productive life", "Excellent feed conversion"]
+  },
+  "red_sindhi": {
+    "milk_yield": "8-10 liters/day",
+    "native_region": "Sindh (Pakistan)",
+    "traits": ["Heat resistant", "Good milk quality", "Adaptable to tropical climate", "Disease resistant"]
+  },
+  "tharparkar": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Rajasthan",
+    "traits": ["Drought resistant", "Excellent for arid regions", "Strong body structure", "Good milk fat content"]
+  },
+  "kankrej": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Gujarat",
+    "traits": ["Highly adaptable", "Good draught power", "Heat and disease resistant", "Suitable for harsh climate"]
+  },
+  "ongole": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Andhra Pradesh",
+    "traits": ["Heat resistant", "Good muscling", "Disease resistant", "Long body frame"]
+  },
+  "hariana": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "Haryana",
+    "traits": ["Excellent draught capability", "Hardy and adaptable", "Good body conformation", "Moderate milk production"]
+  },
+  "kangayam": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "Tamil Nadu",
+    "traits": ["Excellent drought tolerance", "Good for hilly terrain", "Strong physique", "Heat resistant"]
+  },
+  "hallikar": {
+    "milk_yield": "5-6 liters/day",
+    "native_region": "Karnataka",
+    "traits": ["Superior draught power", "Hardy breed", "Good adaptability", "Excellent in dry regions"]
+  },
+  "amritmahal": {
+    "milk_yield": "4-6 liters/day",
+    "native_region": "Karnataka",
+    "traits": ["Excellent draught capability", "Hardy and adaptable", "Good body weight", "Disease resistant"]
+  },
+  "khillari": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "Maharashtra",
+    "traits": ["Superior draught ability", "Well-built frame", "Hardy constitution", "Good for agricultural work"]
+  },
+  "deoni": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Maharashtra",
+    "traits": ["Dual purpose breed", "Good milk and draught", "Excellent adaptability", "Strong body structure"]
+  },
+  "dangi": {
+    "milk_yield": "4-6 liters/day",
+    "native_region": "Maharashtra",
+    "traits": ["Small, dwarf variety", "Excellent for hilly regions", "Good milk quality", "Hardy and disease resistant"]
+  },
+  "rathi": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "Rajasthan",
+    "traits": ["Heat and drought resistant", "Good milk production", "Excellent adaptability", "Long lifespan"]
+  },
+  "nagori": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "Rajasthan",
+    "traits": ["Excellent draught power", "Heat resistant", "Hardy breed", "Good for arid regions"]
+  },
+  "malnad_gidda": {
+    "milk_yield": "4-5 liters/day",
+    "native_region": "Karnataka (Western Ghats)",
+    "traits": ["Small sized breed", "Excellent for hilly terrain", "Hardy and disease resistant", "Good in forest areas"]
+  },
+  "vechur": {
+    "milk_yield": "3-4 liters/day",
+    "native_region": "Kerala",
+    "traits": ["Smallest cattle breed", "Excellent for small holdings", "Good milk quality", "Hardy in tropical climate"]
+  },
+  "bargur": {
+    "milk_yield": "4-6 liters/day",
+    "native_region": "Tamil Nadu",
+    "traits": ["Excellent heat tolerance", "Compact body", "Disease resistant", "Good for hot climates"]
+  },
+  "pulikulam": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "Tamil Nadu",
+    "traits": ["Highly adaptable", "Good milk production", "Hardy constitution", "Excellent heat tolerance"]
+  },
+  "alambadi": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Tamil Nadu",
+    "traits": ["Good milk yield", "Heat resistant", "Dual purpose breed", "Strong and hardy"]
+  },
+  "umblachery": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Tamil Nadu",
+    "traits": ["Good milk production", "Excellent adaptability", "Disease resistant", "Hardy breed"]
+  },
+  "murrah": {
+    "milk_yield": "10-14 liters/day",
+    "native_region": "Punjab (India/Pakistan)",
+    "traits": ["Highest milk yield among buffaloes", "Rich milk with high fat", "Excellent breed quality", "Long productive life"]
+  },
+  "jaffrabadi": {
+    "milk_yield": "8-12 liters/day",
+    "native_region": "Gujarat",
+    "traits": ["High milk production", "Rich and creamy milk", "Excellent body structure", "Good longevity"]
+  },
+  "mehsana": {
+    "milk_yield": "8-10 liters/day",
+    "native_region": "Gujarat",
+    "traits": ["Good milk yield", "Excellent body conformation", "Hardy and adaptable", "Suitable for mixed farming"]
+  },
+  "surti": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Gujarat",
+    "traits": ["Medium milk production", "Good milk composition", "Excellent adaptability", "Hardy in tropical regions"]
+  },
+  "nili_ravi": {
+    "milk_yield": "8-10 liters/day",
+    "native_region": "Punjab (Pakistan)",
+    "traits": ["High milk fat content", "Good milk production", "Excellent conformation", "Long productive cycle"]
+  },
+  "bhadawari": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Uttar Pradesh",
+    "traits": ["Good milk fat", "Excellent for alluvial tracts", "Hardy breed", "Good adaptability"]
+  },
+  "nagpuri": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "Maharashtra",
+    "traits": ["Medium milk production", "Good body build", "Hardy constitution", "Excellent draught capability"]
+  },
+  "toda": {
+    "milk_yield": "4-6 liters/day",
+    "native_region": "Nilgiri Hills, Tamil Nadu",
+    "traits": ["Excellent heat tolerance", "Good adaptation to hills", "Hardy breed", "Decent milk quality"]
+  },
+  "banni": {
+    "milk_yield": "6-8 liters/day",
+    "native_region": "Gujarat",
+    "traits": ["Good milk production", "Excellent adaptability to saline regions", "Hardy and strong", "Drought resistant"]
+  },
+  "holstein_friesian": {
+    "milk_yield": "20-24 liters/day",
+    "native_region": "Netherlands/Germany (Exotic)",
+    "traits": ["Highest milk yield", "Black and white coloring", "Excellent in temperate climate", "Superior breeding genetics"]
+  },
+  "jersey": {
+    "milk_yield": "12-16 liters/day",
+    "native_region": "Jersey Island, UK (Exotic)",
+    "traits": ["High milk fat content", "Golden colored milk", "Small frame", "Excellent feed efficiency"]
+  },
+  "brown_swiss": {
+    "milk_yield": "14-18 liters/day",
+    "native_region": "Switzerland (Exotic)",
+    "traits": ["Good milk production", "Excellent adaptability", "Strong constitution", "Good heat tolerance"]
+  },
+  "ayrshire": {
+    "milk_yield": "14-18 liters/day",
+    "native_region": "Scotland, UK (Exotic)",
+    "traits": ["High milk production", "Red and white coloring", "Excellent dairy quality", "Good longevity"]
+  },
+  "guernsey": {
+    "milk_yield": "12-15 liters/day",
+    "native_region": "Guernsey Island, UK (Exotic)",
+    "traits": ["Golden colored milk", "High beta-carotene", "Good butter content", "Excellent dairy breed"]
+  },
+  "red_dane": {
+    "milk_yield": "16-20 liters/day",
+    "native_region": "Denmark (Exotic)",
+    "traits": ["High milk production", "Excellent feed conversion", "Strong legs", "Good adaptability"]
+  },
+  "brahman": {
+    "milk_yield": "5-7 liters/day",
+    "native_region": "India",
+    "traits": ["Heat resistant", "Excellent draught power", "Hump-backed breed", "Good longevity"]
+  },
+  "ponwar": {
+    "milk_yield": "4-5 liters/day",
+    "native_region": "Uttar Pradesh",
+    "traits": ["Small to medium frame", "Good adaptability", "Hardy breed", "Suitable for marginal lands"]
+  },
+  "@": {
+    "milk_yield": "5-6 liters/day",
+    "native_region": "Northern India",
+    "traits": ["Dual purpose breed", "Good adaptability", "Hardy constitution", "Excellent in mixed farming"]
+  },
+  "steindhal": {
+    "milk_yield": "8-10 liters/day",
+    "native_region": "Germany (Exotic)",
+    "traits": ["Good milk production", "Strong build", "Excellent adaptability", "Hardy breed"]
+  },
+  "simmental": {
+    "milk_yield": "12-14 liters/day",
+    "native_region": "Austria/Germany (Exotic)",
+    "traits": ["Dual purpose breed", "High milk and meat production", "Golden/red color", "Strong body frame"]
+  }
+}
