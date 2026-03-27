@@ -1,0 +1,23 @@
+Loading PyTorch model...
+Model loaded successfully from: C:\Users\vsswe\Documents\CCP\Cattle-Breed-Classification\backend\..\models\indian_bovine_breeds_classifier.pt
+Architecture: EfficientNet-B3
+Number of classes: 41
+Breed metadata loaded successfully: 45 breeds
+
+==================================================
+Starting Cattle Breed Classifier API
+==================================================
+Server: http://localhost:5000
+Predict endpoint: POST http://localhost:5000/predict
+==================================================
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.10.244.113:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 551-101-834
