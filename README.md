@@ -1,31 +1,59 @@
-# 🐄🔍 Cattle Breed Classification System 🚀 | Computer Vision + Deep Learning Project
+# Cattle & Buffalo Breed Recognition System
 
-<img width="1280" height="720" alt="SQL_Thumbnail (32)" src="https://github.com/user-attachments/assets/9d2dd8ee-7f67-44c3-a450-9bbcd232d785" />
+Image-based breed identification for cattle and buffaloes of India using deep learning.
 
-🚀 Learn how I built a Cattle Breed Classifier using Python, TensorFlow & Deep Learning. Identify breeds like Alambadi, Amritmahal, Ayrshire, Banni, and more directly from cattle images with AI + GUI. 🐄🤖
+## Project Structure
 
-💡 Ever wondered if Artificial Intelligence can help farmers, researchers, and veterinarians identify cattle breeds faster?
-In this video, I’ll show you how I built a Cattle Breed Classifier using Python, TensorFlow, and Deep Learning — a complete end-to-end AI project for agriculture & livestock management. 🐮📊
+```
+Cattle-Breed-Classification/
+├── backend/
+│   ├── app.py              # Flask API server
+│   └── requirements.txt    # Python dependencies
+├── frontend/
+│   ├── index.html          # Main HTML
+│   ├── styles.css          # Stylesheet
+│   └── script.js           # JavaScript
+├── models/
+│   └── indian_bovine_breeds_classifier.pt
+└── README.md
+```
 
-We’ll go step by step:
-✅ Loading and preprocessing cattle images
-✅ Training a Deep Learning model with EfficientNetV2B0
-✅ Building a classifier for multiple cattle breeds 🐄
-✅ Creating a GUI with Tkinter for easy image upload & prediction
-✅ Displaying results with breed name & confidence percentage 🎯
+## Tech Stack
 
-This is a full End-to-End Machine Learning Project — perfect for students, beginners, or anyone who wants to add an AI + Agriculture + Computer Vision project to their portfolio. 🌱
+- **Backend:** Python, Flask, PyTorch
+- **Frontend:** HTML, CSS, JavaScript
+- **Model:** EfficientNet-B3
+- **Dataset:** Indian Bovine Breeds (Kaggle)
 
-✨ By the end, you’ll learn how to:
-• Prepare and organize a cattle image dataset
-• Train & test a Deep Learning breed classifier
-• Build a user-friendly GUI for predictions
-• Apply AI in agriculture & livestock research
+## Setup
 
-📌 Technologies Used: Python, TensorFlow, Keras, OpenCV, Tkinter, NumPy
+1. Install dependencies:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
 
-💬 If you’re starting in AI/ML, this tutorial shows how to turn an idea into a working real-world agricultural AI application.
+2. Start backend:
+   ```bash
+   python app.py
+   ```
 
-🔔 Subscribe for more AI, ML, and Python projects: @SouvikChai
+3. Start frontend:
+   ```bash
+   cd frontend
+   python -m http.server 8080
+   ```
 
-📢 Share this project with friends who love AI in Agriculture & Computer Vision! 🌾
+4. Open `http://localhost:8080`
+
+## API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | Health check |
+| POST | `/predict` | Classify image |
+| GET | `/classes` | List breeds |
+
+## Supported Breeds
+
+41 breeds including Gir, Sahiwal, Murrah, Holstein Friesian, Jersey, and others.

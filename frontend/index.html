@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cattle & Buffalo Breed Recognition | ML Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐄</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🐄</span>
+                <div class="logo-text">
+                    <h1>Breed Recognition System</h1>
+                    <p>Image-Based Identification for Cattle & Buffaloes of India</p>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="#demo" class="nav-link active">Demo</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#breeds" class="nav-link">Breeds</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="demo">
+            <div class="hero-text">
+                <div class="hero-badge">Machine Learning Project</div>
+                <h2>AI-Powered Breed Identification</h2>
+                <p>Upload an image of cattle or buffalo to identify its breed using our trained EfficientNet-B3 deep learning model</p>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <div class="demo-container">
+            <!-- Upload Card -->
+            <div class="card upload-card">
+                <div class="card-header">
+                    <span class="card-icon">📤</span>
+                    <h3>Upload Image</h3>
+                </div>
+                <div class="card-body">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <div class="upload-icon">🖼️</div>
+                            <p class="upload-title">Drag & Drop Image Here</p>
+                            <p class="upload-subtitle">or click to browse</p>
+                            <p class="upload-hint">Supported: JPG, PNG, WebP (Max 10MB)</p>
+                        </div>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview Card -->
+            <div class="card preview-card" id="previewCard">
+                <div class="card-header">
+                    <span class="card-icon">🔍</span>
+                    <h3>Image Preview</h3>
+                </div>
+                <div class="card-body">
+                    <div class="preview-container">
+                        <img src="" alt="Preview" id="previewImage" class="preview-image">
+                        <div class="image-info" id="imageInfo">
+                            <span class="file-name" id="fileName">image.jpg</span>
+                            <span class="file-size" id="fileSize">0 KB</span>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-secondary" id="clearBtn">
+                            <span class="btn-icon">✕</span>
+                            Clear
+                        </button>
+                        <button class="btn btn-primary" id="predictBtn">
+                            <span class="btn-icon">🔬</span>
+                            Identify Breed
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Card -->
+            <div class="card result-card" id="resultCard">
+                <div class="card-header">
+                    <span class="card-icon">📊</span>
+                    <h3>Prediction Result</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Loading State -->
+                    <div class="loading-state" id="loadingState">
+                        <div class="spinner"></div>
+                        <p>Analyzing image...</p>
+                    </div>
+
+                    <!-- Result Content -->
+                    <div class="result-content" id="resultContent">
+                        <div class="result-badge">
+                            <span class="badge-icon">✓</span>
+                            Breed Identified
+                        </div>
+
+                        <div class="result-main">
+                            <h4 class="result-label">Predicted Breed</h4>
+                            <h2 class="result-breed" id="resultBreed">-</h2>
+                        </div>
+
+                        <div class="confidence-section">
+                            <div class="confidence-header">
+                                <span>Confidence Score</span>
+                                <span class="confidence-value" id="confidenceValue">0%</span>
+                            </div>
+                            <div class="confidence-bar">
+                                <div class="confidence-fill" id="confidenceFill"></div>
+                            </div>
+                        </div>
+
+                        <div class="top-predictions" id="topPredictions">
+                            <h4>Alternative Predictions</h4>
+                            <div class="predictions-list" id="predictionsList"></div>
+                        </div>
+
+                        <button class="btn btn-primary btn-full" id="newScanBtn">
+                            <span class="btn-icon">🔄</span>
+                            New Prediction
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-toast" id="errorToast">
+            <span class="error-icon">⚠️</span>
+            <span class="error-text" id="errorText">An error occurred</span>
+            <button class="error-close" id="errorClose">✕</button>
+        </div>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="section-header">
+                <h2>About This Project</h2>
+                <p>Understanding the technology behind breed recognition</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🧠</div>
+                    <h3>Deep Learning Model</h3>
+                    <p>Built using EfficientNet-B3 architecture, trained on thousands of images of Indian cattle and buffalo breeds for accurate classification.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📊</div>
+                    <h3>41 Breed Classes</h3>
+                    <p>The model can identify 41 different breeds including indigenous cattle like Gir, Sahiwal, and buffalo breeds like Murrah and Jaffrabadi.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">⚡</div>
+                    <h3>Real-time Prediction</h3>
+                    <p>Get instant breed predictions with confidence scores. The model processes images locally through a Flask API backend.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>High Accuracy</h3>
+                    <p>Trained with data augmentation and transfer learning techniques to achieve reliable breed identification across various image conditions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breeds Section -->
+        <section class="breeds-section" id="breeds">
+            <div class="section-header">
+                <h2>Supported Breeds</h2>
+                <p>41 cattle and buffalo breeds from across India</p>
+            </div>
+
+            <div class="breeds-categories">
+                <div class="breed-category">
+                    <h4>🐄 Indigenous Cattle</h4>
+                    <div class="breed-tags">
+                        <span class="breed-tag">Gir</span>
+                        <span class="breed-tag">Sahiwal</span>
+                        <span class="breed-tag">Red Sindhi</span>
+                        <span class="breed-tag">Tharparkar</span>
+                        <span class="breed-tag">Kankrej</span>
+                        <span class="breed-tag">Ongole</span>
+                        <span class="breed-tag">Hariana</span>
+                        <span class="breed-tag">Kangayam</span>
+                        <span class="breed-tag">Hallikar</span>
+                        <span class="breed-tag">Amritmahal</span>
+                        <span class="breed-tag">Khillari</span>
+                        <span class="breed-tag">Deoni</span>
+                        <span class="breed-tag">Dangi</span>
+                        <span class="breed-tag">Rathi</span>
+                        <span class="breed-tag">Nagori</span>
+                        <span class="breed-tag">Malnad Gidda</span>
+                        <span class="breed-tag">Vechur</span>
+                        <span class="breed-tag">Bargur</span>
+                        <span class="breed-tag">Pulikulam</span>
+                        <span class="breed-tag">Alambadi</span>
+                        <span class="breed-tag">Umblachery</span>
+                    </div>
+                </div>
+                <div class="breed-category">
+                    <h4>🐃 Buffalo Breeds</h4>
+                    <div class="breed-tags">
+                        <span class="breed-tag">Murrah</span>
+                        <span class="breed-tag">Jaffrabadi</span>
+                        <span class="breed-tag">Mehsana</span>
+                        <span class="breed-tag">Surti</span>
+                        <span class="breed-tag">Nili Ravi</span>
+                        <span class="breed-tag">Bhadawari</span>
+                        <span class="breed-tag">Nagpuri</span>
+                        <span class="breed-tag">Toda</span>
+                        <span class="breed-tag">Banni</span>
+                    </div>
+                </div>
+                <div class="breed-category">
+                    <h4>🌍 Exotic Breeds</h4>
+                    <div class="breed-tags">
+                        <span class="breed-tag">Holstein Friesian</span>
+                        <span class="breed-tag">Jersey</span>
+                        <span class="breed-tag">Brown Swiss</span>
+                        <span class="breed-tag">Ayrshire</span>
+                        <span class="breed-tag">Guernsey</span>
+                        <span class="breed-tag">Red Dane</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>🐄 Cattle & Buffalo Breed Recognition</h3>
+                <p>A Machine Learning Project for Image-Based Breed Identification</p>
+            </div>
+            <div class="footer-details">
+                <div class="footer-item">
+                    <span class="footer-label">Technology Stack</span>
+                    <span class="footer-value">Python, PyTorch, Flask, EfficientNet-B3</span>
+                </div>
+                <div class="footer-item">
+                    <span class="footer-label">Dataset</span>
+                    <span class="footer-value">Indian Bovine Breeds (Kaggle)</span>
+                </div>
+                <div class="footer-item">
+                    <span class="footer-label">Model Classes</span>
+                    <span class="footer-value">41 Breeds</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Core Course Project | Machine Learning</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
